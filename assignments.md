@@ -399,6 +399,45 @@ $$a(\beta b + \gamma c) = a_i(\beta b_i + \gamma c_i) = \beta ab + \gamma ac$$
 
 $$(\beta b + \gamma c)a = (\beta b_i + \gamma_i c)a_i = \beta b_i a_i + \gamma c_i a_i$$
 
+## 18
 
+For the vector space $V = \R^2$, if the vector-vector product is defined as 
+
+$$(x_1, x_2)(y_1, y_2) = (x_1y_1 - x_2y_2, x_1y_2 + x_2y_1)$$
+
+We have
+
+$$x(a y + b z) = (x_1(ay_1 + bz_1) - x_2(ay_2 + bz_2), x_1(ay_2 + bz_2) + x_2(ay_1 + bz_1)) = (a(x_1y_1 - x_2y_2) + b(x_1z_1 - x_2z_2), a(x_1y_2 + x_2y_1) + b(x_1z_2 + x_2z_1)) = axy + bxz$$
+
+$$(ay + bz)x = ((ay_1 + bz_1)x_1 - (ay_2 + bz_2)x_2, (ay_1 + bz_1)x_2 + (ay_2 + bz_2)x_1) = (a(y_1x_1 - y_2x_2) + b(z_1x_1 - z_2x_2), a(y_1x_2 + y_2x_1) + b(z_1x_2 + z_2x_1)) = ayx + bzx$$
+
+Therefore this is a valid algebra
+
+This algebra is associative because
+
+$$x(yz) = (x_1(y_1z_1 - y_2z_2) - x_2(y_1z_2 + y_2z_1), x_1(y_1z_2 + y_2z_1) + x_2(y_1z_1 - y_2z_2)) = ((x_1y_1 - x_2y_2)z_1 - (x_1y_2 + x_2y_1)z_2, (x_1y_1 - x_2y_2)z_2 + (x_1y_2 + x_2y_1)z_1) = (xy)z$$
+
+And it is communitive because
+
+$$xy =  (x_1y_1 - x_2y_2, x_1y_2 + x_2y_1) = (y_1x_2 - y_2x_2, y_1x_2 + y_2x_1) = yx$$
+
+
+The cross product on $\R^3$ is defined as
+
+$$xy = (x_2y_3 - x_3y_2, x_3y_1 - x_1y_3, x_1y_2 - x_2y_1)$$
+
+This is an algebra because
+
+$$x(ay + bz) = (x_2(ay_3 + bz_3) - x_3(ay_2 + bz_2), x_3(ay_1 + bz_1) - x_1(ay_3 + bz_3), x_1(ay_2 + bz_2) - x_2(ay_1 + bz_1)) = (a(x_2y_3 - x_3y_2) + b(x_2z_3 - x_3z_2), a(x_3y_1 - x_1y_3) + b(x_3z_1 - x_1z_3), a(x_1y_2 - x_2y_1) + b(x_1z_2 - x_2z_1)) = axy + bxz$$
+
+$$(ay + bz)x = ((ay_2 + bz_2)x_3 - (ay_3 + bz_3)x_2, (ay_3 + bz_3)x_1 - (ay_1 + bz_1)x_3, (ay_1 + bz_1)x_2 - (ay_2 + bz_2)x_1) = (a(y_2x_3 - y_3x_2) + b(z_2x_3 - z_3x_2), a(y_3x_1 - y_1x_3) + b(z_3x_1 - z_1x_3), a(y_1x_2 - y_2x_1) + b(z_1x_2 - z_2x_1)) = ayx + bzx$$
+
+The algebra is not associative because
+
+$$x(yz) = (x_2(y_1z_2 - y_2z_1) - x_3(y_3z_1 - y_1z_3), x_3(y_2z_3 - y_3z_2) - x_1(y_3z_1 - y_1z_3), x_1(y_3z_1 - y_1z_3) - x_2(y_2z_3 - y_3z_2)) \ne (xy)z$$
+
+It is not communitive because
+
+$$xy = (x_2y_3 - x_3y_2, x_3y_1 - x_1y_3, x_1y_2 - x_2y_1) \ne yx$$
 
 
