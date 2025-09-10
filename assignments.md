@@ -440,4 +440,149 @@ It is not communitive because
 
 $$xy = (x_2y_3 - x_3y_2, x_3y_1 - x_1y_3, x_1y_2 - x_2y_1) \ne yx$$
 
+## 19
+
+The map $A_{\pi}$ where $\pi$ of the integers is linear.  If $x = (x_0, x_1, \cdots , x_n) \in \mathbb{C}^n$
+
+then 
+
+$$A_{\pi} x = (x_{\pi(1)}, x_{\pi(2)}, \cdots, x_{\pi(n)})$$
+
+$$A_{\pi}(ax + by) = (ax_{\pi(1)} + by_{\pi(1)}, ax_{\pi(2)} + by_{\pi(2)}, \cdots, ax_{\pi(n)} + by_{\pi(n)}) = aA_{\pi}x + bA_{\pi}y$$
+
+This satisfies the requirements of a linear map.
+
+If $x \in \mathbb{P}^c[t]$ is defined as $x(t) = \sum_{k=0}^n a_k t^k$, and we define the operator $D$ such that $y = Dx$ where $y(t) = \sum_{k=1}^n ka_kt^{k-1}$, then $D$ is the linear derivative operator.
+
+We can write this as a matrix vector equation
+
+$$\begin{pmatrix}
+t^0 \\
+2t^1 \\
+3t^2 \\
+\vdots \\
+nt^{n-1}
+\end{pmatrix} = 
+
+\begin{pmatrix}
+1 & 0 & 0 & 0 & \cdots & 0 & 0 \\
+0 & 2 & 0 & 0 & \cdots & 0 & 0 \\
+0 & 0 & 3 & 0 & \cdots & 0 & 0 \\
+  &   &   & \vdots &   &   &   \\
+0 & 0 & 0 & 0 & \cdots & 1 & 0 \\
+\end{pmatrix}
+
+\begin{pmatrix}
+t^0 \\
+t^1 \\
+t^2 \\
+\vdots \\
+t^n
+\end{pmatrix}$$
+
+This mapping can be written down as a matrix operation, which means it is linear because any matrix operation follows
+
+$$D(ax + by) = aDx + bDy$$
+
+$C^n(a,b) is the set of all functions in the interval $(a,b)$ whose first $n$ derivatives are continuous.  for all $f \in C^n(a,b)$ define $u = Gf$ where $u(t) = g(t)f(t)$ and $g(t)$ is a fixed function in $C^n(a,b)$.  
+
+$G$ is linear because
+
+$$G(af_1 + bf_2) = g(t)(af_1(t) + bf_2(t)) = ag(t)f_1(t) + bg(t)f_2(t) = aGf_1 + bGf_2$$
+
+This holds also for the cases where $g(t) = t$
+
+$$t(af_1 + bf_2) = atf_1(t) = btf_2(t)$$
+
+## 20
+
+For the algebra of $\R^2$ with multiplication defined as element wise scalar multiplication.
+
+The unit element of this algebra is $(1,1)$
+
+A subalgebra is defined for the subspace $\R$ with multiplication defined as normal scalar multiplication.
+
+The center is all elements in $\R^2$ which commute with all other elements of $\R^2$.  For this example the center is all of $\R^2$
+
+
+## 21
+
+For the algebra where the vector sace is $R^3$ and multipliation is the cross product defined by
+
+$$xy = (x_2y_3 - x_3y_2, x_3y_1 - x_1y_3, x_1y_2 - x_2y_1)$$
+
+The basis for this vector space is $\{e_x, e_y, e_z\} = \{(1,0,0), (0,1,1), (0,0,1)\}$
+
+The structure constants are defined by
+
+$$e_ie_j = c_{ij}^1 e_x + c_{ij}^2 e_y + c_{ij}^3 e_z$$
+
+$$c_{i,j}^1 = \begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0 
+\end{pmatrix}$$
+
+$$c_{i,j}^2 = \begin{pmatrix}
+0 & 0 & -1 \\
+0 & 0 & 0 \\
+1 & 0 & 0 
+\end{pmatrix}$$
+
+$$c_{i,j}^1 = \begin{pmatrix}
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 0 
+\end{pmatrix}$$
+
+
+The algebra is not associative because
+
+$$x(yz) = (x_2(y_1z_2 - y_2z_1) - x_3(y_3z_1 - y_1z_3), x_3(y_2z_3 - y_3z_2) - x_1(y_3z_1 - y_1z_3), x_1(y_3z_1 - y_1z_3) - x_2(y_2z_3 - y_3z_2)) \ne (xy)z$$
+
+It is not communitive because
+
+$$xy = (x_2y_3 - x_3y_2, x_3y_1 - x_1y_3, x_1y_2 - x_2y_1) \ne yx$$
+
+The center of the algebra is $0$, because it is the only one that commutes with everything else.
+
+The algebra does not have an identity.  There is no vector that multiplies with any other vector and returns that same vector
+
+## 22
+
+For all points in the plane except zero, $\R^2 ~ \{0\}$, define an equivalence relation $\bowtie$ where two points are equal if they lie on the same line passing through the origin.
+
+
+
+![lines through origin](./figures/lines_through_origin.png)
+
+The factor set is turned into a factor space by defining a way to construct linear combinations of elements in the set which result in another element in the set.  If we define an element in the factor set based on the angle of the line from the horizontal, the factor set turns into a factor space because you can add angles and multiply them by scalars and you get angles out.
+
+The factor space is isomorphic to $\R$ on the interval $[0 \pi]$.  The interval is required because the line defined by $\pi + \alpha$ is the same as the line defined by $\alpha$.  This space is essentially the same as the space of one-dimensional real numbers
+
+We need to define addition and multiplication as 
+
+$$a + b = mod_{\pi}(a + b)$$
+
+$$\alpha a = mod_{\pi}(\alpha a)$$
+
+This ensures that the angles stay within the interval
+
+Equation 2.2 holds for this case
+
+$$dim(\R^2 ~ \{0\} / \R) = dim(\R^2 ~ \{0\}) - dim(\R) = 2 - 1 = 1$$
+
+We cannot include the origin in the underlying set because the point at the origin lies aon all of the lines assing through the origin.  This would mean that it is equivalent to all vectors in the factor set, which would mean that every element in the factor set would be equivalent to zero.
+
+## 23
+
+$\pi$ is the permutation that takes (1,2,3) to (3,1,2)
+
+for the standard basis in $\R^3$ defined by $\{e_i\}_{i=1}^3 = \{(1,0,0), (0,1,0), (0,0,1)\}$
+
+$$A_{\pi}e_1 = (0, 1, 0)$$
+
+$$A_{\pi}e_2 = (0, 0, 1)$$
+
+$$A_{\pi}e_3 = (1, 0, 0)$$
 

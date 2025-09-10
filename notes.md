@@ -399,4 +399,44 @@ Are called homorphisms
 
 **Automorphism:** An isomorphism of an algebra onto itself
 
+## 3.2 Ideals
+
+Subalgebras whose elements are stable under the whole algebra (when multiplied by elements in the whole algebra, they still stay in the subalgebra)
+
+**Left ideal:** A subspace $B$ of $A$ is a left ideal of $A$ if it contains $ab$ for all $a \in A$ and $b \in B$.  Written $AB \subset B$
+
+**Right ideal:** $BA \subet B$
+
+**Ideal:** both left and right ideal
+
+**Minimal ideal:** An ideal of $A$ is minimal if every ideal of $A$ contained in $M$ coincides with $M$.  Does this mean there are no other ideals contained within $M$ other than $M$ itself?
+
+If $A$ is a direct sum of subalgebras, then each subalgebra is an ideal of $A$.  Any other ideal of $A$ is contained entirely in one of the components of this direct sum
+
+### 3.2.1 Factor algebras
+
+If $A$ is an algebra and $B$ is a subspace of $A$, then the factor space $A/B$ can be turned into an algebra if and only if $B$ is an ideal in $A$
+
+Example - $A$ is the algebra of real polynomials $\R[x]$ and $B$ is all polynomials of the form $f(x)(x^2 + 1)$ (every polynomial with factor $x^2 + 1$).  $B$ is an ideal in $A$ because multiplying by any other polynomial in $A$ will still be in $B$.
+
+$A/B$ is a factor space - every element is an equivalents class of polynomials modulo $x^2 + 1$
+
+$$f(x) = g(x) \text{ if } f(x) - g(x) \in x^2 + 1$$
+
+## 3.3 Total matrix algebra
+
+The vector space of $n \times n$ matrices with a basis $\{ e_{ij}\}_{i,j = 1}^n$ where $e_ij$ has a $1$ at the $ij$th position and a zero everywhere else.  This basis has $n^2$ vectors in it. 
+
+$$(e_{ij})_{lk} = \delta_{il} \delta_{jk}$$
+
+This is saying that the $lk$th element of $e_{ij}$ is zero everywhere except when $k = j$ and $l=i$
+
+$$(e_{ij}e_{kl})_{mn} = \sum_{r=1}^n (e_{ij})_{mr}(e_{kl})_{rn}$$
+
+$$= \sum_{r=1}^n \delta_{im}\delta_{jr}\delta_{kr}\delta_{ln} = \delta_{im}\delta_{jk}\delta_{ln} = \delta_{jk}(e_{il})_{mn}$$
+
+$$e_{ij}e_{kl} = \delta_{jk}e_{il}$$
+
+structure constants are $c_{ij,kl}^{mn} = \delta_{im}\delta_{jk}\delta_{ln}$
+
 

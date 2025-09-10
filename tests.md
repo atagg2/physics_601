@@ -128,3 +128,61 @@ $$\xi(\alpha a + \beta b) = \lang\alpha a + \beta b | \alpha a + \beta b\rang = 
 $$\alpha\xi(a) + \beta\xi(b) = \alpha\sum_{i=1}^n a_i^2 + \beta\sum_{i=1}^n b_i^2$$
 
 The two expressions are not equal, and the mapping is not linear. 
+
+## 5
+
+$W$ is a subspace of $\R^5$ defined by 
+
+$$W = \{(x_1, \cdots, x_5) | x_1 = 3x_2 + x_3, x_2 = x_5, \text{and} x_4 = 2x_3\}$$
+
+A basis for $W$ is
+
+$$B = \{ 
+\begin{pmatrix}  
+1 \\
+0 \\
+1 \\
+2 \\
+0
+\end{pmatrix}, 
+
+\begin{pmatrix}
+0 \\
+1 \\
+-3 \\
+-6 \\
+1
+\end{pmatrix}\}$$
+
+## 6
+
+With the underlying vector space $\R^3$, and the equivalence relation $a \bowtie b$ if $\lang a, a \rang = \lang b, b \rang$, a factor set is the set of all equivalence classes defined by this equivalence relation.
+
+This factor set creates a factor space where each vector $a$ is labeled by it's norm $\lang a,a \rang$.  
+
+The dimension of the original vector space is 3, the dimension of the equivalence classes the make up the factor set is 2.  The dimension of the factor set itself is 1
+
+In this case, the equivalence classes are spherical surfaces.  Each equivalence classes has a different radius
+
+A factor space is constructed from the factor set by defining vectors that are labeled with the radius of that equivalence class
+
+In order to know if the set of radii is a vector space, we need to know if its possible to make linear combinations of them and still obtain another "radius" or vector in the factor space.  We can do this by defining vector addition in this space as the scalar multiplication of the radii
+
+$$|a \rang + |b \rang = ab$$
+
+And we define scalar multiplication to be exponentiation 
+
+$$a\lpha a = a^{\alpha}$$
+
+This is logarithmic space, and as shown in a previous assignment it adheres to all the necessary properties of a vector space
+
+We defined addition and multiplication in this way in order to avoid the problem of "negative" radii that would arrise if we defined addition in the normal way.
+
+This factor space is isomorphic to $\R^+$, the space of one dimensional positive real numbers
+
+
+
+
+
+
+
