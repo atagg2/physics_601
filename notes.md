@@ -250,7 +250,7 @@ A vector space $V$ is isomorphic to another vector space $W$ if there is a bijec
 
 $T$ is called an isomorphism.
 
-**Automorphism**: A bijective linear map of $V$ onto itself, also called invertible linear map.  This is denoted by $GL(V)$
+**Automorphism**: A bijective linear map of $V$ onto itself, also called invertible linear map.  This is denoted by $GL(V)$ or $End(V)$
 
 Two finite-dimensional vectro spaces are isomorphic if and only if they have the same dimension.  This means that all $n$ dimensional vector spaces over $\mathbb{R}$ are isomorphic to $\mathbb{R}^n$.  This is why the vector space defined by an interval on the real number line is isomorphic to the entire number line.
 
@@ -362,6 +362,8 @@ In associative algebras, there is no difference between left and right inverses 
 
 **Center:** If $A$ is an algebra, the set of elements which commute with all elements of $A$ is the center and is a subalgebra of $A$
 
+**Central:** An algebra is central if its center is $Span\{1\}$
+
 **Structure constants:** Given the basis $B \{e_i\}_{i=1}^N$ 
 
 $$e_ie_j = \sum_{k=1}^Nc_{ij}^k e_k$$
@@ -382,14 +384,13 @@ and so on.  This algebra has $27$ structure constaints - $3$ for each of the $9$
 
 **Generator:** A subset of an algebra $A$ is a generator of $A$ if $A$ can be spanned by a linear combination of the products of the subset. Bases are always generators, but they are not the smallest ones.  For example, the algebra $(\R^3, \times)$ has the basis $\{e_x,e_y,e_z\}$, but $\{e_x, e_y\}$ is a generator because $e_z = e_x \times e_y$
 
-### 3.1.2 Homorphisms
+### 3.1.2 Homomorphisms
 
 Linear maps between algebras that satisfy
 
 $$\phi(ab) : A \to B = \phi(a)\phi(b)$$
 
-Are called homorphisms
-
+Are called homorphisms.  They are linear maps that are not bijective.  An example is $f(x) = 1$ 
 
 **Monomorphism:** An injective homorphism
 
@@ -438,5 +439,375 @@ $$= \sum_{r=1}^n \delta_{im}\delta_{jr}\delta_{kr}\delta_{ln} = \delta_{im}\delt
 $$e_{ij}e_{kl} = \delta_{jk}e_{il}$$
 
 structure constants are $c_{ij,kl}^{mn} = \delta_{im}\delta_{jk}\delta_{ln}$
+
+# 4 Operator algebra
+
+Algebra of linear transformations
+
+## 4.1 Algebra of $End(V)$
+
+The product in the vector space of endomorphims $End(V)$ is defined as the composition of maps.  It has the zero element and the identity.
+
+Only automorphims of a vector space are invertible
+
+The inverse of a linear operator is unique.  If $T$ and $S$ are invertible linear operators, then $TS$ is also invertible and $(TS)^{-1} = S^{-1}T^{-1}$
+
+An endomorphism $T \in End(V)$ is invertible iff it sends a basis of $V$ onto another basis of $V$
+
+### 4.1.1 Polynomials of operators
+
+We can construct polynomials of operators
+
+$$p(T) = \alpha_01 + \alpha_1T + \alpha_2T^2 + ... + \alpha_nT^n$$
+
+Negative powers of an operator are defined as $T^{-n} = (T^{-1})^n$ 
+
+A great example of products of operators and inverses of operators is in the Hassani book pg 103-104
+
+### 4.1.2 Functions of operators
+
+Going beyond polynomials to general functions of operators.
+
+We use the taylor series expansion.
+
+$$f(x) = \sum_{k=0}^{\infty} \frac{(x - x_0)^k}{k!} \left. \frac{d^kf}{dx^k} \right|_{x=x_0} $$
+
+To generalize this to operators,
+
+$$f(T) = \sum_{k=0}^{\infty} \frac{(T - x_01)^k}{k!} \left. \frac{d^kf}{dx^k} \right|_{x=x_0} $$
+
+## 4.2 Derivatives of operators
+
+Operators can be dynamic For the mapping $H : \R \to End(V)$ The derivative can be expressed as
+
+$$\frac{dH}{dt} = \lim_{\Delta t \to 0} \frac{H(t + \Delta t) - H(t)}{\Delta t}$$
+
+## 4.3 Conjugation of operators
+
+If there is a map $c = Tb$ then there is another map $c^{\dagger} = b^{\dagger} T^{\dagger}$ 
+
+$T^{\dagger}$ is the adjoint or hermitian conjugate
+
+The definition of the adjoint is
+
+$$(a^{\dagger} T b)^{\dagger} = b^{\dagger} T^{\dagger} a$$
+
+Operators can also be decomposed inot real and imaginary parts
+
+$$T = X + iY$$
+
+**Hermitian:** A linear operator is hermitian if $H^{\dag} = H$
+
+For a hermitian operator,  $a^{\dag}Ha$ is real
+
+**Positive definite:** An operator is positive definite if $a^{\dag} H a > 0$ for all $a \neq 0$.  Positive definite operators are invertible
+
+### 4.3.2 Unitary operators
+
+Unitary operators preserve distances and the scalar product
+
+If $U$ is a unitary operator, and $a' = Ua$ and $b' = Ub$ then $\lang a', b' \rang = \lang a, b \rang$
+
+In other words, $U$ preserves distances and angles
+
+$$U^{\dag}U = 1$$
+
+The common example is rotation and translation
+
+## 4.4 Idempotents
+
+Linear maps with the property $P^2 = P$.  These are like projections onto subspaces where if something is already in the subspace, then the projection does not change it.  $P_x(x,y) = (x,0)$
+
+### 4.4.1 Projection operators
+
+A projection operator is a hermitian idempotent.  (hermitian meaning $T^{\dag} = T$)
+
+if $P_1$ and $P_2$ are projection operators, then $P_1 + P_2$ is also a projection operator iff $P_1$ and $P_2$ are orthogonal meaning $P_1P_2 = P_2P_1 =  0$
+
+Given a normal vector $e$, $e e^{\dag}$ is a projection operator
+
+$$P_y = \frac{yy^{\dag}}{y^{\dag}y}$$
+
+or 
+
+$$P_y = \frac{|y\rang \lang y|}{\lang y|y\rang}$$
+
+$P_y x$ is the projection of $x$ along $y$
+
+## 4.5 Representation of algebras
+
+A real (or complex) representation of an algebra $A$ in a vector space $V$ is a mapping $\rho : A \to End_{\R}(V)$
+
+An example is the real representation of quaternions from the book pg 126 where 
+
+$$\rho(q) = \begin{pmatrix} 
+q_0 & -q_1 & -q_2 & -q_3 \\
+q_1 & q_0 & -q_3 & q_2 \\
+q_2 & q_3 & q_0 \cdots
+\end{pmatrix}$$
+
+Or perhaps the real representation the algebra of complex numbers?
+
+## 5.4 Change of basis
+
+there is a matrix that represents a change of basis
+
+$$a' = Ba$$
+
+The $ij$th component of $B$ is calculated by $\rang e_i | e_j' \lang$
+
+More details on pg 150
+
+## 6.1 Invariant supspaces
+
+$M$ is a subspace of $V$.  $M^\perp$ is the set of all vectors in $V$ that are orthogonal to $M$ 
+
+We can make subspaces of a finite dimensional vector space using a linear operator $A$
+
+$$a, Aa, A^2a, \cdots$$
+
+Are all linearly independant and span a subspace $M = Span \{ A^k a\}$
+
+for any vector $x \in M$, $Ax$ is also in $M$
+
+**Invariant supcae:**  the subspace $M$ is an invariant subspace of the operator $A$ if $A$ transforms vectors from $M$ into vectors of $M$.  $A(M) \subset M$
+
+$M$ reduces $A$ if $M$ and $M^{\perp}$ are invariant subspaces of $A$
+
+Think of block diagonal matrices for this
+
+$$\begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 2 \end{pmatrix}$$
+
+$M$ is the $x-y$ plane, and $M^{\perp}$ is the $z$ axis 
+
+Both are subspaces of $V$ that are invariant under $A$
+
+## 6.4 Complex Spectral Decomposition
+
+**Normal Operator:** An operator that commutes with its adjoint (must act on an inner product space)
+
+If it is normal, the operator satisfies
+
+$$||Ax|| = ||A^{\dag}x||$$
+
+Any invariant subspace of a normal operator reduces that operator
+
+If $x$ is an eigenvector of $A$ with eigenvalue $\lambda$ then $x$ is also an eigenvalue of $A^{\dag}$ with eigenvalue $\lambda^*$ ($A$ must be normal)
+
+If we apply this to a hermitian operator we get 
+
+$$Hx = \lambda x = H^{\dag}x = \lambda^*x$$
+
+therefore
+
+$$\lambda = \lambda^*$$
+
+which means $\lambda$ is real
+
+For a unitary operator we get 
+
+$$\lambda \lambda^* = 1$$
+
+And $\lambda$ has absolute value of $1$
+
+An eigenspace of a normal operator reduces that operator, and the eigenvectors of a normal operator are orthogonal
+
+**Complex Spectral Decomposition Theorem:**
+
+Let $A$ be a normal operator on a finite-dimensional complex inner product space $V$, and let $\lambda_1, \lambda_2, \cdots, \lambda_n$ be it's eigenvalues. Then
+
+$$V = M_1 \oplus M_2 \oplus \cdot \oplus M_n$$
+
+where $M_i$ is the eigenspace corresponding to $\lambda_i$
+
+And the projection operators 
+
+$$P_1, P_2, \cdots, P_n$$
+
+where $P_i$ projects onto $M_i$ satisfy
+
+$$1 = \sum_{i=1}^n P_i$$
+
+$$P_iP_j = 0 \text{, for } i \ne j$$
+
+$$A = \sum_{i=1}^n \lambda_i P_i$$
+
+A normal operator is diagonalizable and a diagonalizable operator is normal
+
+The largest eigenvalue can be approximated by
+
+$$\lambda_1 = \lim_{m \to \infty} \frac{\lang y | A^{m+1} | x \rang}{\lang y | A^{m} | x \rang}$$
+
+## Polar Decomposition
+
+Any matrix $A$ can be decomposed as
+
+$$A = UR$$
+
+where 
+
+$$R^2 = A^{\dag}A$$
+
+and
+
+$$U = AR^{-1}$$
+
+### 6.4.1 simultaneous diagonalization
+
+Two operators are simultaneously diagonalizable if they can be written
+
+$$A_1 = P \Lambda_1 P^{-1}$$
+
+$$A_2 = P \Lambda_2 P^{-1}$$
+
+I \frac{1}{\sqrt{3}}\begin{pmatrix} 1 \\ -i \\ 1\end{pmatrix}n other words, they share the same eigenvectors, but have different eigenvalues
+
+## 7 Hilbert spaces
+
+Infinite dimensional vector spaces
+
+Convergence of infinite series
+
+## 8 Classical orthogonal polynomials
+
+Legendre
+
+$$a_n = \frac{2n + 1}{2}\int_{-1}^1 f(x) P_n(x) dx $$
+
+Hermite
+
+$$a_n = \frac{1}{\sqrt{\pi} 2^n n!}\int_{-1}^1 f(x) H_n(x) e^{-x^2}dx $$
+
+
+## 9.1 Fourier Series
+
+The Fourier series expansion of $f(x)$ is
+
+$$F(x) = \frac{1}{2}A_0 + \sum_{n=1}^{\infty} \left( A_n \cos \frac{2 n \pi x}{L} + B_n \sin \frac{2 n \pi x}{L} \right)$$
+
+$$A_n = \frac{2}{L} \int_a^b \cos \frac{2 n \pi x}{L} F(x) dx$$
+$$B_n = \frac{2}{L} \int_a^b \sin \frac{2 n \pi x}{L} F(x) dx$$
+
+
+## 9.2 Fourier transform
+
+To get to the fourier transform, we consider expanding a fourier series over the interval $(-\infty, \infty)$.  If we separate our function copies by extending the period by $\Delta$ on either side, as $\Delta \to \infty$, the infinite sum of the fourier series becomes an integral
+
+$$F(\omega) = \frac{1}{\sqrt{2 \pi}}\int_{-\infty}^{\infty} f(x) e^{-i \omega x}dx$$
+
+And the inverse transform is
+
+
+$$f(x) = \frac{1}{\sqrt{2 \pi}}\int_{-\infty}^{\infty} F(\omega) e^{-i \omega x}d \omega$$
+
+### 9.2.2 Fourier transforms and derivtives
+
+The fourier d\transform turns derivatives into multiplication due to the nature of the exponential
+
+$$\frac{df}{dx} = \int_{-\infty}^{\infty} F(\omega) -i \omega e^{-i \omega x}dx$$
+
+### 9.2.3 Discrete fourier transform
+
+Discrete fourier transform is a way to go from the time domain to frequency domain with discrete measurements.  It basically tells you what highest frequency content of your signal is.
+
+## 23.1 Groups
+
+**Group:** A set $G$ together with a defined binary operation called multiplication.  The set contatins an identity element $ge = eg = g$, and the inverse $gg^{-1} = e$ 
+
+Examples:
+
+* The set of integers whose binary operation is addition
+* The set $\{ -1, 1\}$ with the binary operation of multiplication
+
+**Transformation group:** the set of invertible mappings of a set onto itself
+
+**Abelian group:** all elements commute: $ab = ba \forall a, b \in G$
+
+**Homomorphism:** f(a*b) = f(a)*f(b)
+
+**Isomorphism:** a homomorphism that is also a bijection
+
+**General Linear group:** $GL(V)$ the set of all invertible endomorphisms of $V$
+
+**Subgroup:** a subgroupd $S$ of $G$ is a group in it's own right under the binary operation of $G$
+
+## 23.2.1 Direct products
+
+A groupd $G$ is a direct product of two subgroups $H_1$ and $H_2$ $G = H_1 \times H_2$ if 
+
+* All elements of $H_1$ commute iwth all elements of $H_2$
+* the group identity is the only element in common between $H_1$ and $H_2$
+* every elements $g \in G$ can be written as $g = h_1h_2$ where $h_1 \in H_1$ and $h_2 in H_2$
+
+
+## 23.3 Group Action
+
+The left action of group $G$ on set $M$ is a mapping $\phi : G \times M \to M$ such that
+
+* $\phi(e,m) = m \;\; \forall m \in M$
+* $\phi(g_1g_2, m) = \phi(g_1, \phi(g_1, m))$
+
+Think of it as moving from one point in $M$ to another point in $M$ through the action $g \in G$
+
+The mapping $\phi(g,m)$ is denoted as $gm$
+
+The **orbit** of m is denote as $Gm$
+
+$$Gm = \{x \in M | x = gm \text{ for some } g \in G\}$$
+
+This is all the points in $M$ that can be reached from the single point $m$ by any transformation in the group $G$
+
+**Transitive:** $Gm = M$ - the whole set can be reached by the transformations in $G$
+
+**Stabilizer of m:** $G_m = \{g \in G | gm = m\}$ - the group of transformations that just map $m \to m$
+
+**Free action:** if $G_m = \{e\} \; \forall m \in M$ - meaning the only stabilizer for any $m$ is the identity
+
+**Effective:** if $gm = m$ implies that $g = e$
+
+Read over remark 23.3.1 on page 714 - this helps a lot
+
+two points are connected by a unique element of $G$ iff $G$ acts freely on the orbit
+
+Think of a free action as the condition that there is no point in $M$ from which no transformation $G$ can take you to a new point - like rotations on the point at the origin will only give you the origin, there is no escape from the origin.
+
+effective: no g is stuck for all m
+free: no g is stuck for any m
+
+
+## 23.4 Symmetric (permutation) group
+
+the permutation $\pi$ defined with the product $\pi_2(i) * \pi_1(i) = \pi_2(\pi_1(i))$
+
+**r_cyle:** generated by $i$ is the set of $r$ distinct elements $\{\pi^r(i)\}_{k=0}^{r-1}$ where $\pi^r(i) = i$ - its the elements that appear in a cycle that takes us from $i$ all the way back to $i$ by some defined permutaion $\pi$
+
+Start with $1$ and apply  $\pi$ to it repeatedly until you obtain $1$ again. The collection of elements so obtained forms a cycle in which $1$ is contained. Then we select a second number that is not in this cycle and apply $\pi$ to it repeatedly until the original number is obtained again. Continuing in this way, we produce a set of disjoint cycles that exhausts all elements of $\{1,2,...,n\}$.
+
+Any permutation can be boken up into disjoint cycles
+
+## 24.1 Representations of groups
+
+Let $G$ be a group and $H$ a Hilbert space.  A representation of $G$ on $H$ is a homomorphism $T : G \to GL(H)$
+
+**faithful:** the representation is faithful if it is bijective
+
+**equivalent:** two representations $T: G \to GL(H)$ and $T' : G \to GL()H'$ are equivalent if there exists an isomorphism $f : H \to H'$ such that $T' = f \circ T \circ f^{-1}$ for all $g \in G$
+
+A representation $T : G \to GL(H)$ defines an action of a group $G$ on a Hilbert space $H$ by $\phi(g, |a \rang) = T_g |a \rang$ 
+
+For a Hamiltonian $\mathbf{H}(x)$ with a group of symmetry $G$
+
+$$T_g [\mathbf{H}(x)]T_g^{-1} = \mathbf{H}(x \cdot g)$$
+
+
+The action of the group on a function is defined by
+
+$$(T_g \psi)(x) = \psi(x \cdot g)$$
+
+where $(T_g \psi)$ is a new function
+
+Applied to matrices where multiplication is most natural on the left,
+
+$$(T_g \psi)(x) = \psi(g^{-1}x)$$
 
 
