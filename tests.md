@@ -830,4 +830,473 @@ m_2m_1^2 & C
 \end{array}$$
 
 
+## 30
+
+Generators of a group are $\{a,b\}$ with relations $a^4 = e$, $b^2 = e$, $ba = a^-1b$
+
+The Cayley table for this group is
+
+
+$$
+\begin{array}{c|cccccccc}
+& e & a & a^2 & a^3 & b & ba & ba^2 & ba^3 \\
+\hline
+e & e & a & a^2 & a^3 & b & ba & ba^2 & ba^3 \\
+a & a & a^2 & a^3 & e & ba^3 & b & ba & ba^2 \\
+a^2 & a^2 & a^3 & e & a & ba^2 & ba^3 & b & ba \\
+a^3 & a^3 & e & a & a^2 & ba & ba^2 & ba^3 & b \\
+b & b & ba & ba^2 & ba^3 & e & a & a^2 & a^3 \\
+ba & ba & ba^2 & ba^3 & b & a^3 & e & a & a^2 \\
+ba^2 & ba^2 & ba^3 & b & ba & a^2 & a^3 & e & a \\
+ba^3 & ba^3 & b & ba & ba^2 & a & a^2 & a^3 & e
+\end{array}
+
+$$
+
+a subgroup of order $2$ is $\{e,b\}$
+
+The set $\{a^2, b\}$ generates $\{e, a^2, b, ba^2\}$ which is a valid subgroupd because is has closure under the Cayley table
+
+$H$ is not a normal subgroup because $b$ does not commute with every element in the broader group.
+
+
+## 31
+
+For the quaternion group $mathbb{Q}_8$, the order is $|Q_8| = 8$ therefore there can exist subgroups of order $4$ and $2$
+
+The group is not abelian because $ab = g \ne h = ba$
+
+Subgroups are
+
+$$\{e, a, c, d\}$$
+
+$$\{e, b, c, f\}$$
+
+$$\{e, g, c, h\}$$
+
+Conjugacy classes are
+
+$$d\{e, a, c, d\}a = \{e, a, c, d\}$$
+$$f\{e, a, c, d\}b = \{e, d, c, a\}$$
+$$c\{e, a, c, d\}c = \{e, a, c, d\}$$
+$$h\{e, a, c, d\}g = \{e, d, c, a\}$$
+
+$$d\{e, b, c, f\}a = \{e, f, c, b\}$$
+$$f\{e, b, c, f\}b = \{e, b, c, f\}$$
+$$c\{e, b, c, f\}c = \{e, f, c, b\}$$
+$$h\{e, b, c, f\}g = \{e, b, c, f\}$$
+
+$$d\{e, g, c, h\}a = \{e, h, c, g\}$$
+$$f\{e, b, c, f\}b = \{e, g, c, h\}$$
+$$c\{e, b, c, f\}c = \{e, h, c, g\}$$
+$$h\{e, b, c, f\}g = \{e, g, c, h\}$$
+
+So conjugacy classes are $\{e, a, c, d\}, \{e, b, c, f\}, \{e, g, c, h\}$
+
+Right cosets of $\{e, a, c, d\}$ are
+
+$$\{e, a, c, d\}a = \{a, c, d, e\}$$
+$$\{e, a, c, d\}b = \{b, g, f, h\}$$
+$$\{e, a, c, d\}c = \{c, d, e, a\}$$
+$$\{e, a, c, d\}d = \{d, e, a, c\}$$
+$$\{e, a, c, d\}f = \{f, h, b, g\}$$
+$$\{e, a, c, d\}g = \{g, f, h, b\}$$
+$$\{e, a, c, d\}h = \{h, b, g, f\}$$
+
+
+Left cosets of $\{e, a, c, d\}$ are
+
+$$a\{e, a, c, d\} = \{a, c, d, e\}$$
+$$b\{e, a, c, d\} = \{b, h, f, g\}$$
+$$c\{e, a, c, d\} = \{c, d, e, a\}$$
+$$d\{e, a, c, d\} = \{d, e, a, c\}$$
+$$f\{e, a, c, d\} = \{f, g, b, h\}$$
+$$g\{e, a, c, d\} = \{g, b, h, f\}$$
+$$h\{e, a, c, d\} = \{h, f, g, b\}$$
+
+This is a normal subgroup because it commutes with the entire group as seen by the fact that the left ans right cosets are the same
+
+
+
+
+## 32
+
+Subgroups of $D_4$ of size $2$ can be found by identifying where $e$ occurs on the diagonal. That means that there is an element that is its own inverse, and therefore forms a subgroup with itelf and the identity
+
+$$\{e, a^2\}$$
+$$\{e, b\}$$
+$$\{e, ba\}$$
+$$\{e, ba^2\}$$
+$$\{e, ba^3\}$$
+
+
+The subgroup of size $4$ is 
+
+$$\{e, a, a^2, a^3\}$$
+
+This subgroup is not normal because
+
+$$ab = ba^3 \ne ba$$
+
+the set $\{a^2, b\}$ does not the entire group
+
+$$a^2 a^2 = e$$
+$$a^2 b = ba^2$$
+
+And you cannot create any more outside $\{a^2, b, ba^2\}$
+
+
+## 34
+
+Is $G = \Z$, with normal multiplication, then $G$ is not a group because the identity is $1$, but inverses are not in $\Z$
+
+$G = \mathbb{Q}$ is not a group because $0$ does not have an inverse 
+
+$G = \{e^x | x \in \R\}$ does form a group.  the identity is $e^0$, and inverses are $e^{-x}$
+
+$G = \{q \in \mathbb{Q} | q >0\}$ does form a group.  The identity is $1$ and inverses are $\frac{1}{q}$ 
+
+$G = \R$ has the same problem as $G = \mathbb{Q}$.  If it contains the $0$ element then this does not have an inverse
+
+$G = \Z$ with multiplication $a \cot b = 0$ does not form a group because there is no identity element
+
+
+## 35
+
+The two generators of a group are $a = \begin{pmatrix}i & 0 \\ 0 & -i\end{pmatrix}$, $b = \begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}$
+
+These generate the group
+
+$$\{e, a, a^2, a^3, b, ba, ba^2, ba^3\}$$
+
+This has a Cayley table of
+
+
+
+$$
+\begin{array}{c|cccccccc}
+ & e & a & a^2 & a^3 & b & ba & ba^2 & ba^3 \\
+\hline
+e & e & a & a^2 & a^3 & b & ba & ba^2 & ba^3\\
+a & a & a^2 & a^3 & e & ba^3 & b & ba & ba^2\\
+a^2 & a^2 & a^3 & e & a & ba^2 & ba^3 & b & ba \\
+a^3 & a^3 & e & a & a^2 & ba & ba^2 & ba^3 & b\\
+b   & b & ba & ba^2 & ba^3 & a^2 & a^3 & e & a \\
+ba  & ba & ba^2 & ba^3 & b & a & a^2 & a^3 & e\\
+ba^2 & ba^2 & ba^3 & b & ba & e & a & a^2 & a^3\\
+ba^3 & ba^3 & b & ba & ba^2 & a^3 & e & a & a^2
+\end{array}
+$$
+
+
+Subgroups are 
+
+$$\{e, a, a^2, a^3\}$$
+$$\{e, b, ba^2, a^2\}$$
+$$\{e, ba, ba^3, a^2\}$$
+$$\{e, a^2\}$$
+
+Conjugacy classes  and characters are
+
+$$\{a^3, a^2, a, ba^2, ba^3, b, ba\}a\{a, a^2, a^3, b, ba, ba^2, ba^3\} = \{a, a^3\} \to \chi_1=0$$
+
+$$\{a^3, a^2, a, ba^2, ba^3, b, ba\}a^2\{a, a^2, a^3, b, ba, ba^2, ba^3\} = \{a^2\} \to \chi_2=-2$$
+
+$$\{a^3, a^2, a, ba^2, ba^3, b, ba\}b\{a, a^2, a^3, b, ba, ba^2, ba^3\} = \{ba^2,b\} \to \chi_3 = 0$$
+
+$$\{a^3, a^2, a, ba^2, ba^3, b, ba\}ba\{a, a^2, a^3, b, ba, ba^2, ba^3\} = \{ba^3, ba\} \to \chi_4 = 0$$
+
+The subgroup of order $2$ is $\{e, a^2\}$.  This subgroup is a center because both $e$ and $a^2$ commute with every element in the group
+
+A subgroup of order $4$ is $\{e, a, a^2, a^3\}$.  The factor group for this subgroup is 
+
+$$\{e, a, a^2, a^3, b, ba, ba^3, ba^3\}\{e, a, a^2, a^3\} = \{\{e, a, a^2, a^3\}, \{b, ba, ba^2, ba^3\}\}$$
+
+
+
+
+## 36
+
+The group $\Z_2 \times \Z_2$ is not isomorphic to $\Z_4$ because the Cayley tables do not match.
+
+
+The Cayley table for $\Z_2 \times \Z_2$ is
+
+
+
+$$
+\begin{array}{c|cccc}
+
+& (0,0) & (1,0) & (0,1) & (1,1) \\
+\hline
+
+(0,0) & (0,0) & (1,0) & (0,1) & (1,1) \\
+(1,0) & (1,0) & (0,0) & (1,1) & (0,1) \\
+(0,1) & (0,1) & (1,1) & (0,0) & (1,0) \\
+(1,1) & (1,1) & (0,1) & (1,0) & (0,0)
+
+\end{array}
+$$
+
+which does not have the same cyclic structure as $\Z_4$
+
+
+
+
+## 37
+
+For the given $3 \times 4 \times 3 \times 2$ tensor, the strides for the natural ordering are $s_1 = 1$, $s_2 = 3$, $s_3 = 12$, $s_4 = 36$ 
+
+The linear indices $Y(17,35,55,63) = (2,4,4,1)$
+
+The linear indices for the $2$s are $17,26,31,49,72$
+
+This corresponds to the tupel indecs $(2,2,2,1), (2,1,3,1), (1,3,3,1), (1,1,2,2), (3,4,3,2)$
+
+
+## 45
+
+For the given tensor, the values of the linear indices $Y(22,36,47,67) = (9,8,4,9)$
+
+The linear index for one of the $9$s in the first slice is $5$, and it's tuple index is $(2,2,1,1)$ 
+
+The linear index for one of the $9$s in the second slice is $16$, and it's tuple index is $(1,2,2,1)$ 
+
+givent the vectors $a = (5,-2,3)^T$, $b = (0,11,2,-1)^T$, $c = (7,1)^T$, we can take an outer product to produce a $3 \times 4 \times 2$ tensor
+
+$$X_{ijk} = a_ib_jc_k$$
+
+$$X[:,:,1] = \begin{pmatrix}0 & 385 & 70 & -35 \\ 0 & -154 & -28 & 14 \\ 0 & 231 & 42 & -21\end{pmatrix}$$
+$$X[:,:,2] = \begin{pmatrix}0 & 55 & 10 & -5 \\ 0 & -22 & -4 & 2 \\ 0 & 33 & 6 & -3\end{pmatrix}$$
+
+
+The left side of the given equation is 
+
+$$\partial_i \epsilon_{ijk} a_j b_k$$
+
+The right side is
+
+$$b_i \epsilon_{ijk} \partial_j a_k - a_i \epsilon_{ijk} \partial_j b_k$$
+
+By the product rule, the left side is
+
+$$\partial_i \epsilon_{ijk} a_j b_k = \epsilon_{ijk}b_k\partial_ia_j + \epsilon_{ijk}a_j \partial_i b_k$$
+
+Since $\epsilon_{kij} = \epsilon_{ijk}$, the first term becomes 
+
+$$\epsilon_{kij}b_k \partial_i a_j$$ 
+
+which equivalent to $b_i\epsilon_{ijk} \partial_j a_k$ just with the indices labeled differently
+
+Since $\epsilon_{jik}  = -\epsilon_{ijk}$, the second term becomes
+
+$$-\epsilon_{jik} a_j \partial_i b_k$$
+
+which is equivalent to $-a_i \epsilon_{ijk} \partial_j b_k$ just with the indices labeled differently.
+
+Therefore
+
+$$\partial \epsilon_{ijk} a_j b_k = b_i \epsilon_{ijk} \partial_j a_k - a_i \epsilon_{ijk} \partial_j b_k$$
+
+## 46
+
+The Fourier series expansion of $f(x) = \begin{cases} 1 & |x| < 1 \\ 0 & 2 > |x| > 1 \end{cases}$ is as follows
+
+$$f(x) = \frac{1}{2} A_0 + \sum_{n=1}^{\infty}\left( A_n \cos \frac{n \pi x}{2} + B_n \sin \frac{n \pi x}{2} \right)$$
+
+The coefficients are
+
+$$A_0 = \int_0^1 dx = 1$$
+
+$$A_n = \int_{0}^{1} \cos \frac{n \pi x}{2} dx = \frac{2}{n \pi} \sin(\frac{n \pi}{2})$$
+
+$$B_n = 0$$
+
+using the first $15$ terms
+
+![factor set](./figures/fourier_hat.png)
+
+For the function $f(x) = \begin{cases} 1 & |x| < 1 \\ 0 & \infty > |x| > 1 \end{cases}$
+
+The fourier transform is
+
+$$F(\omega) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} f(x) e^{-i \omega x} dx = \frac{1}{\sqrt{2\pi}} \int_{-1}^{1} e^{-i \omega x} dx  = \frac{2}{\omega \sqrt{2\pi}} \sin \omega$$
+
+
+
+## 47
+
+$$M = \begin{pmatrix} 2 & i & 1 \\ -i & 2 & -i \\ 1 & i & 2\end{pmatrix}$$
+
+For the spectral decomposition,
+
+$$Mx = \lambda x$$
+
+To find eigenvalues,
+
+$$\left|M - \lambda I\right| = \left| \begin{matrix} 2 - \lambda & i & 1 \\ -i & 2-\lambda & -i \\ 1 & i & 2 - \lambda\end{matrix}\right|$$
+$$= (2 - \lambda)^3 - (2-\lambda) - (2-\lambda) + 1 + 1 - (2-\lambda)$$
+$$= (2 - \lambda)^3 - 2(2 - \lambda) + \lambda = 0$$
+
+Plotting this function 
+
+![factor set](./figures/roots.png)
+
+The eigenvalues are $(1,1,4)$
+
+For $\lambda = 1$
+
+$$\begin{pmatrix} 1 & i & 1 \\ -i & 1 & -i \\ 1 & i & 1\end{pmatrix} \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix}0 \\ 0 \\ 0 \end{pmatrix}$$
+
+so eigenvectors are $(1,0,-1)^T, (1, i, 0)^T$
+
+for $\lambda = 4$
+
+$$\begin{pmatrix} -2 & i & 1 \\ -i & -2 & -i \\ 1 & i & -2\end{pmatrix} \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix}0 \\ 0 \\ 0 \end{pmatrix}$$
+
+so an eigenvector is $(1, -i, 1)^T$
+
+We can therefore decompose $M$ as
+
+$$M = \begin{pmatrix} 1 & 1 & 1 \\ 0 & i & -i \\ -1 & 0 & 1\end{pmatrix}\begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 4 \end{pmatrix}\begin{pmatrix} 1 & 1 & 1 \\ 0 & i & -i \\ -1 & 0 & 1\end{pmatrix}^{-1}$$
+
+
+We can express $\cos(\pi M)$ as
+
+$$\cos(\pi M) = \sum_{k=0}^{\infty} \frac{M^k}{k!} \frac{d^k \cos(\pi x)}{dx^k} \Big|_{x=0}$$
+
+Using the eigenvalue decomposition, $M^k = X\Lambda^kX^{-1}$, so the taylor seires becomes
+
+$$\cos(\pi M) = X\left( \sum_{k=0}^{\infty}\frac{\Lambda^k}{k!} \frac{d^k \cos(\pi x)}{dx^k} \Big|_{x=0}\right)X^{-1} $$
+
+$$=X\left( I - \frac{(\pi \Lambda)^2}{2!} + \frac{(\pi \Lambda)^4}{4!} - \frac{(\pi \Lambda)^6}{6!} + \cdots + (-1)^{k} \frac{(\pi \Lambda)^{2k}}{(2k)!}\right)X^{-1}$$
+
+with $20$ terms, the answer seems to be converging to 
+
+$$\frac{1}{3}\begin{pmatrix} -1 & 2i & 2 \\ -2i & -1 & -2i \\ 2 & 2i & -1 \end{pmatrix}$$
+
+I'm now realizing that this is the same as $X \cos(\pi \Lambda) X^{-1}$.  Somehow I remembered that $M^k = X \Lambda^k X^{-1}$, but not that $f(M) = Xf(\Lambda)X^{-1}$, which makes it way easier to evaluate because $\Lambda$ is diagonal.  
+
+My process with the taylor series actually proves this result because
+
+$$f(M) = \sum_{k=0}^{\infty} \frac{M^k}{k!} \frac{d^k f}{dx^k} \Big|_{x=0}$$
+$$= X\left( \sum_{k=0}^{\infty}\frac{\Lambda^k}{k!} \frac{d^k f}{dx^k} \Big|_{x=0}\right)X^{-1} $$
+$$=Xf(\Lambda) X^{-1}$$
+
+
+Well I spent a bunch of time doing that taylor series and I'm just going to leave it there.  At least I learned something new on the final! 
+
+
+The spectral decomposition also makes computing the inverse way easier
+
+$$M^{-1} = X \Lambda^{-1} X^{-1} = \frac{1}{4}\begin{pmatrix} 3 & -i & -1 \\ i & 3 & i \\ -1 & -i & 3\end{pmatrix}$$
+
+
+## 48
+
+The vectors inside the Hilbert space spanned by the polynomials $\{1,x,x^2\}$ are infinite-dimensional in the sense that they are functions, but at the same time, they can be represented by $3$ coefficients, so I think technically it is a $3$-dimensional space
+
+An orthonormal basis can be constructed using the Grahm-Schmidt process
+
+$$e_1 = \frac{1}{\sqrt{\int_{-1}^1 dx}}=\frac{1}{\sqrt{2}}$$
+
+$$e_2' = x - e_1\langle e_1, x\rangle = x - \frac{1}{2}\int_{-1}^1 x dx = x $$
+
+$$e_2 = \frac{e_2'}{\sqrt{\lang e_2', e_2' \rang}} = \frac{x}{\sqrt{\int_{-1}^1 x^2 dx}} = \sqrt{\frac{3}{2}}x$$
+
+$$e_3' = x^2 - e_1\langle e_1, x^2 \rangle - e_2 \langle e_2, x^2 \rangle = x^2 - \frac{1}{2}\int_{-1}^1 x^2 dx - \frac{3}{2}x \int_{-1}^1 x^3 dx = x^2 - \frac{1}{3}$$
+
+$$e_3 = \frac{e_3'}{\sqrt{\lang e_3', e_3'\rang}} = \frac{x^2 - \frac{1}{3}}{\sqrt{\int_{-1}^1 \left(x^4 - \frac{2}{3}x^2 + \frac{1}{9}\right)dx}} = \sqrt{\frac{45}{8}}x^2 - \sqrt{\frac{5}{8}}$$
+
+![factor set](./figures/orthonormal_basis.png)
+
+If I remember right, eigenfunctions for $\frac{d^2}{dx^2} \psi(x) = -\lambda^2 \psi(x)$ are $\sin \lambda x$ where $\lambda = n \pi$.  For the lowest non-trivial mode, $\lambda = \pi$ the eigenfunction is $\sin \pi x$
+
+To approximate this in our basis we take projections of $\sin \pi x$ onto each basis vector
+
+$$a_1 = \lang\sin \pi x, e_1 \rang = \frac{1}{\sqrt{2}}\int_{-1}^1 \sin \pi x dx = 0 $$
+$$a_2 = \lang\sin \pi x, e_2 \rang = \sqrt{\frac{3}{2}}\int_{-1}^1 x \sin \pi x dx = 0.78 $$
+$$a_3 = \lang\sin \pi x, e_3 \rang = \sqrt{\frac{45}{8}}\int_{-1}^1 (x^2 - \frac{1}{3}) \sin \pi x dx = 0 $$
+
+I chose to compute these integrals numerically using a trapezoid integration function that I wrote 
+
+![factor set](./figures/trapz.png)
+
+The approximation is then
+
+$$\sin \pi x \approx 0.78 \sqrt{\frac{3}{2}}x$$
+
+![factor set](./figures/sin_new_basis.png)
+
+This isn't a great approximation because we have so few basis fucntions.  If by "lowest eigenmode" you meant the trivial $\lambda=0$, then it is perfectly captured in the new basis by $(0,0,0)$
+
+
+## 49
+
+The Cayley table for $\Z_2 \times \Z_3$ is 
+
+
+
+
+$$
+\begin{array}{c|cccccc}
+       & (0, 0) & (0, 1) & (0, 2) & (1, 0) & (1, 1) & (1, 2) \\
+\hline
+(0, 0) & (0, 0) & (0, 1) & (0, 2) & (1, 0) & (1, 1) & (1, 2) \\
+(0, 1) & (0, 1) & (0, 2) & (0, 0) & (1, 1) & (1, 2) & (1, 0) \\
+(0, 2) & (0, 2) & (0, 0) & (0, 1) & (1, 2) & (1, 0) & (1, 1) \\
+(1, 0) & (1, 0) & (1, 1) & (1, 2) & (0, 0) & (0, 1) & (0, 2) \\
+(1, 1) & (1, 1) & (1, 2) & (1, 0) & (0, 1) & (0, 2) & (0, 0) \\
+(1, 2) & (1, 2) & (1, 0) & (1, 1) & (0, 2) & (0, 0) & (0, 1)\\
+\end{array}
+$$
+
+This group is commutative as shown by the symmetric Cayley table, and $S_3$ is not, therefore they are not isomorphic
+
+Conjugacy classes for this group are 
+
+$$\{(0,0), (0,2), (0,1), (1,0), (1,2), (1,1)\}(0,1)\{(0,0), (0,1), (0,2), (1,0), (1,1), (1,2)\}$$
+$$=\{(0,1)\}$$
+
+$$\{(0,0), (0,2), (0,1), (1,0), (1,2), (1,1)\}(0,2)\{(0,0), (0,1), (0,2), (1,0), (1,1), (1,2)\}$$
+$$=\{(0,2)\}$$
+
+$$\{(0,0), (0,2), (0,1), (1,0), (1,2), (1,1)\}(1,0)\{(0,0), (0,1), (0,2), (1,0), (1,1), (1,2)\}$$
+$$=\{(1,0)\}$$
+
+$$\{(0,0), (0,2), (0,1), (1,0), (1,2), (1,1)\}(1,1)\{(0,0), (0,1), (0,2), (1,0), (1,1), (1,2)\}$$
+$$=\{(1,1)\}$$
+
+$$\{(0,0), (0,2), (0,1), (1,0), (1,2), (1,1)\}(1,2)\{(0,0), (0,1), (0,2), (1,0), (1,1), (1,2)\}$$
+$$=\{(1,2)\}$$
+
+Each element is it's own conjugacy class
+
+This means there are $6$ irreducible representations, each with dimension $1$.  This must be true because the order of the group is $6$ and the only way $6$ integers add to $6$ is if they are all $1$
+
+
+## 50
+
+Using the elements $a$ and $b$ with the relations $a^5 = e$, $b^2 = e$, and $ba = a^4b$ we can generate the group
+
+
+$$
+\begin{array}{c|cccccccc}
+ & e & a & a^2 & a^3 & a^4 & b & ba & ba^2 & ba^3 & ba^4 \\
+\hline
+e & e & a & a^2 & a^3 & a^4 & b & ba & ba^2 & ba^3 & ba^4  \\
+a & a & a^2 & a^3 & a^4 & e & ba^4\\
+a^2 & a^2 & a^3 & a^4 & e & a \\ 
+a^3 & a^3 & a^4 & e & a & a^2 \\
+a^4 & a^4 & e & a & a^2 & a^3 & ba & ba^2 & ba^3 & ba^4 & b \\
+b & b & ba & ba^2 & ba^3 & ba^4 & e & a & a^2 & a^3 & a^4 \\
+ba & ba & ba^2 & ba^3 & ba^4 & ba^4 & a^4 & e & a & a^2 & a^3 \\
+ba^2 & ba^2 & ba^3 & ba^4 & b & ba & a^3 & a^4 & e & a & a^2 \\
+ba^3 & ba^3 & ba^4 & b & ba & ba^2 & a^2 & a^3 & a^4 & e & a\\
+ba^4 & ba^4 & b & ba & ba^2 & ba^3 & a & a^2 & a^3 & a^4 & e
+
+\end{array}
+$$
+
+$$ab = b^2ab = ba^4b^2$$
 

@@ -316,6 +316,8 @@ It also maps to a scalar, therefore it is a linear functional.
 
 The vector space $C^0(a,b)$ is the set of all functions that are $C^0$ continuous that lie on the interval $(a,b)$.  $C^0$ continuous means that the function itself is defined everywhere on that interval, but the functions derivative need not be.
 
+
+
 ## 16
 
 An example of a linear map with a non-trivial null space is defined by the matrix
@@ -2281,3 +2283,534 @@ Every matrix representation is either $0$, $1$, or $-1$.  This is because the sy
 if $V = \{\phi_{11}, \phi_{12}, \phi_{21}, \phi_{22}\}$ then the invariant subspaces are $\{\phi_{11}\}$, $\{\phi_{12}, \phi_{21}\}$, and $\{\phi_{22}\}$ this means that the representation is reducible, and there are $3$ irreducible representations present in my representation?  I'm still a little confused about why we say that the representation is reducible rather than the suspace being reducible by $T$.  It doesn't seem lik $T$ is being reduced because every time we use all of $T$ to determine if a subspace is invariant
 
 
+## 91
+
+The matrix representation of $S_3$ is 
+
+
+$$\begin{array}{c|c} g & T(g)  \\
+\hline
+(1,2,3) & \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \\
+(1,3,2) & \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix} \\
+(2,1,3) & \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix} \\
+(3,1,2) & \begin{pmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix} \\
+(3,2,1) & \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix} \\
+(2,3,1) & \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix} \\
+
+ \end{array}$$
+
+This is clearly a faithful representation because it is 1-1
+
+
+## 92
+
+The minimal subspace containing $\phi_1(x,y,z) = xy$ that is invariant under the action of $S_3$ is $\{\phi_1 = xy, \phi_2 = yz, \phi_3 = xz\}$
+
+The matrix representation of $S_3$ in this subspaces is 
+
+$$T_1 \{\phi_1, \phi_2, \phi_3\} = \{xy, yz, xz\} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+$$T_2 \{\phi_1, \phi_2, \phi_3\} = \{yx, xz, yz\} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix}$$
+$$T_3 \{\phi_1, \phi_2, \phi_3\} = \{zy, yx, zx\} = \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+$$T_4 \{\phi_1, \phi_2, \phi_3\} = \{xz, zy, xy\} = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}$$
+$$T_5 \{\phi_1, \phi_2, \phi_3\} = \{zx, xy, zy\} = \begin{pmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix}$$
+$$T_6 \{\phi_1, \phi_2, \phi_3\} = \{yz, zx, yx\} = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{pmatrix}$$
+
+
+## 95 
+
+The Hamiltonian $H(x) = -\frac{d^2}{dx^2} + \sin^2(s \pi x)$
+
+Has the parity $Px = -x$ as a symmetry, and the group $G = \{e, P\}$ is a group of symmetry for $H$
+
+This means we can label the eigenstates of the Hamiltonian using the eigenvalues of $P$ and label them as even with an eigenvalue of $1$ or odd with an eigenvalue of $-1$
+
+
+
+## 96
+
+The mapping $T : S_3 \to GL(\R)$ where $\pi_i \to 1$ if the parity of $\pi_i$ is even, and $\pi_i \to -1$ if the parity of $\pi_i$ is odd is written as
+
+
+
+
+$$\begin{array}{c|c} g & T(g)  \\
+\hline
+(1,2,3) & 1 \\
+(1,3,2) & -1 \\
+(2,1,3) & -1 \\
+(3,1,2) & 1 \\
+(3,2,1) & -1 \\
+(2,3,1) & 1 \\
+ \end{array}$$
+
+This is a homomorphism because $T(g_1g_2) = T(g_1)T(g_2)$ we know this is true for all $g \in S_3$ because a composition of two odd permutations will produce an even permutation which corresponds to $(-1)(-1) = 1$ in the representation.  A composition of and even with an even will produce an even $(1)(1) = 1$, and a composition of an even with an odd will produce and odd $(1)(-1) = -1$
+
+Also, are all representations homomorphisms?
+
+The carrier space is $\R$
+
+The dimension of $T$ is $1$
+
+The representation is not fatihful because it is not $1-1$
+
+
+## 99
+
+The matrices that represent the symmetry group of this triangle are
+
+$$\begin{array}{c|c} g & T(g)  \\
+\hline
+e & \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}  \\
+R_{120} & \begin{pmatrix} 0 & 1 \\ -1 & -1 \end{pmatrix}   \\
+R_{240}  & \begin{pmatrix} -1 & -1 \\ 1 & 0 \end{pmatrix} \\
+F_a & \begin{pmatrix} 1 & 0 \\ -1 & -1 \end{pmatrix} \\
+F_b & \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+F_b & \begin{pmatrix} -1 & -1 \\ 0 & 1 \end{pmatrix} \\
+\end{array}$$
+
+The carrier space of the representation is $\R^2$
+
+
+
+
+## 100
+
+If $S_3$ acts on $\R^3$, the subset of vectors of the form $(a,a,a)$ forms a $1$ dimensional invariant subspace under the action of $S_3$ because any permutation of $(a,a,a)$ will result in the same vector, therefore $(a,a,a)$ forms a subspace of vectors that are label by the $1$ dimenaional value $a$ and is therefore isomorphic to $\R$
+
+A vector that forms a $3$ dimensional invariant subspace is $(a,a,b)$, because the action of $S_3$ on this vector produces $3$ unique vectors $\{(a,a,b), (a,b,a), (b,a,a)\}$
+
+
+## 102
+
+The group $D_3$ can be represented as
+
+$$e = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+$$r = \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1/2 & -\sqrt{3}/2 \\ 0 & \sqrt{3}/2 & -1/2 \end{pmatrix}$$
+$$r^2 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1/2 & \sqrt{3}/2 \\ 0 & -\sqrt{3}/2 & -1/2 \end{pmatrix}$$
+$$s = \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix}$$
+$$sr = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1/2 & -\sqrt{3}/2 \\ 0 & -\sqrt{3}/2 & 1/2 \end{pmatrix}$$
+$$sr^2 = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1/2 & \sqrt{3}/2 \\ 0 & \sqrt{3}/2 & 1/2 \end{pmatrix}$$
+
+This representation is faithful because it is $1-1$
+
+This representation is made up of 2 irreducible representation
+
+The carrier space has a subspace $\{(a,0,0)^T\}$ which is invariant under the action of the group, and $\{(0,b,0)^T, (0,0,c)^T\}$ which is also invariant
+
+## 103
+
+A faithful irreducible representation of $D_4$ is shown in the table below as well as each element's character
+
+$$\begin{array}{c|c|c} g & T(g) & \chi \\
+\hline
+e & \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} & 2 \\
+R_{90} & \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} & 0 \\
+R_{180}  & \begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix} & 0 \\
+R_{270} & \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} & 0 \\
+f_x & \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} & 0\\
+f_y & \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} & 0\\
+f_{x+y} & \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} & 0 \\
+f_{y-x} & \begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix} & 0\\
+
+ \end{array}$$
+
+This irrep is faithful because it is $1-1$ the characters are simple because 
+
+
+## 108
+
+The group generated by $g_1 = \begin{pmatrix} 0 & i \\ i & 0\end{pmatrix}$ and $g_2 = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$ is 
+
+$$\{\pm \begin{pmatrix} 1 & 0 \\ 0 & 1\end{pmatrix}, \pm\begin{pmatrix} 0 & i \\ i & 0\end{pmatrix}, \pm\begin{pmatrix} 0 & 1 \\ -1 & 0\end{pmatrix}, \pm\begin{pmatrix} -i & 0 \\ 0 & i\end{pmatrix}\}$$
+
+The sum of the squares of traces of these is $tr(I)^2 + tr(-I)^2 = 2^2 + 2^2 = 8$ which is also the order of the group
+
+
+
+## 110
+
+$A_4$ is the smallest group that has a 3 dimensional irrep.  It has the 4 conjugacy classes.  The dimensionalities of the corresponding irreps must satisfy the formula $\sum d_i^2 = |A_4| = 12$  The only solution with 4 positive integers is $1^2 + 1^2 + 1^2 + 3^3$
+
+
+
+## 111
+
+The group $D_4$ has the following elements: $\{e, r, r^2, r^3, r^4, s, sr, sr^2, sr^3, sr^4\}$
+
+And conjugacy classes are 
+
+$$\{e\}$$
+$$\{r, r^4\}$$
+$$\{r^2, r^3\}$$
+$$\{sr, sr^2, sr^3, sr^4\}$$
+
+Since the order of the group is $10$, and there are $4$ irreps, these must be of dimensionality $1^2 + 1^2 + 2^2 + 2^2 = 10$
+
+The $2$ one dimensional irreps are the identity irrep which is always $1$, and an irrep that is either $1$ for rotation or $-1$ for reflection.
+
+For the first 2 dimensional irrep, we defined $R = \begin{pmatrix} \cos(2 \pi/5) & -\sin(2 \pi/5) \\ \sin(2 \pi/5) & \cos(2 \pi / 5)\end{pmatrix}$ and $S = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$ taking products of these matrices then generate the rest of the representation
+
+For the second 2 dimensional irrep, we defined $R = \begin{pmatrix} \cos(4 \pi/5) & -\sin(4 \pi/5) \\ \sin(4 \pi/5) & \cos(4 \pi / 5)\end{pmatrix}$ and $S = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$ 
+
+The character table for this is 
+
+$$\begin{array}{c|cccc} & e & r, r^4 & r^2, r^3, & \text{reflections} \\
+
+\hline 
+
+\text{Identity} & 1 & 1 & 1 & 1 \\
+\text{Sign} & 1 & 1 & 1 & -1\\
+R_1 & 2 & 2\cos(2 \pi/5) & 2 \cos(4 \pi/5) & 0\\
+R_2 & 2 & 2 \cos(4 \pi/5) & 2 \cos(2 \pi/5) & 0\\
+
+\end{array}$$
+
+for $i=1$, $j = (1,2,3,4)$  eq. $24.27$ holds
+
+$$1 \cdot 1  + 1 \cdot 1 + 2 \cdot 2 + 2 \cdot 2 = 10$$
+
+$$1 \cdot 1  + 1 \cdot 1 + 2 \cdot 2\cos(2 \pi/5) + 2 \cdot 2\cos(4 \pi/5) = 0$$
+
+$$1 \cdot 1  + 1 \cdot -1 + 2 \cdot 0 + 2 \cdot 0 = 0$$
+
+for $i=2$, $j=2$
+
+$$1 \cdot 1  + 1 \cdot 1 + 2\cos(2 \pi/5) \cdot 2 \cos(2\pi/5) + 2\cos(4 \pi/5) \cdot 2\cos(4 \pi/5) = 10$$
+
+for $i=3$, $j=4$
+
+$$1 \cdot 1  + 1 \cdot -1 + 0 + 0 = 0$$
+
+
+
+
+## 113
+
+The group $D_5=\{e, r, r^2, r^3, r^4, s, sr, sr^2, sr^3, sr^4\}$ must have non-trivial proper subgroups that are orders $2$ and $5$ because these are the only two integers that divide $10$ - the order of the entire group
+
+The $2$ dimensional subgroups represent each reflection, and have $2$ conjugacy classes/irreps.  This includes the identity and the reflection as distinct $1$ dimensional classes - they had to be $1$ dimensional because $1^2 + 1^2 = 2$
+
+The character table for these subgroups looks like
+
+$$\begin{array}{c|cc} & e & s \\
+\hline
+\text{Identity} & 1 & 1 \\
+\text{Alternating} & 1 & -1
+
+\end{array}$$
+
+The $5$ dimensional subgroup contains all the rotations, and every element in the group is its own conjugacy class - this is because it is abelian.  Since there are $5$ irreps, each one must be $1$ dimensional
+
+The character table for this subgroup is 
+
+
+$$
+\begin{array}{c|ccccc}
+ & e & r & r^2 & r^3 & r^4 \\ \hline
+R_0 & 1 & 1 & 1 & 1 & 1 \\
+R_1 & 1 & e^{2\pi i (1)(1)/5} & e^{2\pi i (1)(2)/5} & e^{2\pi i (1)(3)/5} & e^{2\pi i (1)(4)/5} \\
+R_2 & 1 & e^{2\pi i (2)(1)/5} & e^{2\pi i (2)(2)/5} & e^{2\pi i (2)(3)/5} & e^{2\pi i (2)(4)/5} \\
+R_3 & 1 & e^{2\pi i (3)(1)/5} & e^{2\pi i (3)(2)/5} & e^{2\pi i (3)(3)/5} & e^{2\pi i (3)(4)/5} \\
+R_4 & 1 & e^{2\pi i (4)(1)/5} & e^{2\pi i (4)(2)/5} & e^{2\pi i (4)(3)/5} & e^{2\pi i (4)(4)/5}
+\end{array}
+$$
+
+
+
+
+## 116
+
+$$A \cdot (B \times C) = B \cdot (C \times A) = C \cdot (A \times B)$$
+
+in index notation
+
+$$a_i \epsilon_{ijk} b_j c_k = b_i \epsilon_{ijk} c_j a_k = c_i \epsilon_{ijk} a_j b_k $$
+
+This is true because the elements are just scalarse and can be moved aroundinside the summations
+
+$$b_i \epsilon_{ijk}c_ja_k = a_k\epsilon_{ijk}b_ic_j$$
+
+And $\epsilon_{ijk} = \epsilon_{kij}$, so we just switched the labels around but didnt change the result.  The same thing happens for $c_i \epsilon_{ijk} a_j b_k$
+
+
+
+$$A \times (B \times C) = (A \cdot C)B - (A \cdot B)C$$
+
+In index notation
+
+$$\epsilon_{ijk} a_j \epsilon_{kmn}b_mc_n = a_j \epsilon_{kij}\epsilon_{kmn}b_mc_n = a_j(\delta_{im}\delta_{jn} - \delta_{in}\delta_{jm})b_mc_n = a_jc_jb_i - a_jb_jc_i$$
+
+$$\nabla \cdot (\nabla \times A) = \partial_i \epsilon_{ijk} \partial_j a_k$$
+
+swapping the dummy indices $i \leftrightarrow j$ will not change the result of the summation, and the order of the partials does not matter.
+
+$$\epsilon_{ijk} \partial_i \partial_j a_k = \epsilon_{jik} \partial_j \partial_i a_k = -\epsilon_{ijk} \partial_j \partial_i a_k = - \epsilon_{ijk} \partial_i \partial_j a_k   $$
+
+The only thing that is the negative of itself is $0$
+
+$$\nabla \times (\nabla f) = \epsilon_{ijk} \partial_j \partial_kf$$
+
+The same trick is used here by swapping $j \leftrightarrow k$ and recognizing that $\partial_j\partial_k = \partial_k\partial_j$
+
+$$\epsilon_{ijk} \partial_j \partial_kf = \epsilon_{ikj} \partial_k \partial_jf =-\epsilon_{ijk} \partial_k \partial_jf = -\epsilon_{ijk} \partial_j \partial_kf = 0$$
+
+
+
+## 117
+
+$$P = \begin{pmatrix} \cos \theta & -\sin \theta & 0 \\ \sin \theta & \cos \theta & 0 \\ 0 & 0 & 1\end{pmatrix}$$
+
+$$P^T = \begin{pmatrix} \cos \theta & \sin \theta & 0 \\ -\sin \theta & \cos \theta & 0 \\ 0 & 0 & 1\end{pmatrix}$$
+
+$$\sigma' = \begin{pmatrix} \cos \theta & \sin \theta & 0 \\ -\sin \theta & \cos \theta & 0 \\ 0 & 0 & 1\end{pmatrix}\begin{pmatrix} 1 & -1 & -1 \\ -1 & 1 & -1 \\ -1 & -1 & 1\end{pmatrix}\begin{pmatrix} \cos \theta & -\sin \theta & 0 \\ \sin \theta & \cos \theta & 0 \\ 0 & 0 & 1\end{pmatrix}$$
+
+$$ = \begin{pmatrix} 1-\sin(2\theta) & -\cos(2 \theta) & -\cos \theta - \sin \theta \\ - \cos (2 \theta) & 1 + \sin(2 \theta) & \sin \theta - \cos \theta \\ -\cos \theta - \sin \theta & \sin \theta - \cos \theta & 1\end{pmatrix}$$
+
+$\sigma'_{x'y'}$ vanishes for $\theta=(2n+1)\pi/4$ This means that the there is no stress in that particular direction.
+
+
+
+
+## 118
+
+$$A = \begin{pmatrix} -1 & 2 & 0 \\ 0 & 1 & 3 \\ 4 & 0 & -2\end{pmatrix}$$
+$$B = \begin{pmatrix} 2 & 0 & 1 \\ -1 & 3 & 1 \\ 0 & 2 & 1\end{pmatrix}$$
+
+Inner product method
+
+$$\sum_k A_{ik}B_{kj} =\begin{pmatrix} -4 & 6 & 1 \\ -1 & 9 & 4 \\ 8 & 4 & 6\end{pmatrix}$$
+
+
+Outer product method
+
+$$\sum_k A_{:,k}B_{k,:} = \begin{pmatrix} -2 & 0 & -1 \\ 0 & 0 & 0 \\ 8 & 0 & 4\end{pmatrix} + \begin{pmatrix} -2 & 6 & 2 \\ -1 & 3 & 1 \\ 0 & 0 & 0\end{pmatrix} + \begin{pmatrix} 0 & 0 & 0 \\ 0 & 6 & 3 \\ 0 & 4 & 2\end{pmatrix} = \begin{pmatrix} -4 & 6 & 1 \\ -1 & 9 & 4 \\ 8 & 4 & 6\end{pmatrix}$$
+
+
+
+
+## 119
+
+For $A = \begin{pmatrix} 5 & 2 & 0 & 1 & -3 \\ -1 & 4 & 2 & 0 & 1 \\ 3 & -2 & 1 & 5 & 0 \\ 0 & 1 & -4 & 2 & 2 \\ 2 & 0 & 3 & -1 & 4\end{pmatrix}$
+
+The SVD is shown in the screenshot below
+
+
+![factor set](./figures/svd.png)
+
+Using the first 4 terms in the sum to approximate $A$
+
+
+![factor set](./figures/svd_approx.png)
+
+for $x = (1,1,1,1,1)^T$, $Ax$ is compared to $\tilde{A}x$ below
+
+![factor set](./figures/Ax_approx.png)
+
+In this case, it looks like the first element changed the most.  The approximation as okay, but the singular value we ended up cutting off was $3.14$ - so not negligible compared to the rest
+
+
+## 121
+
+The strides in $2.1$ are $(1,2,4)$,$(1,4,2)$,$(2,1,4)$,$(2,4,1)$,$(4,1,2)$,$(4,2,1)$,
+
+For a $4 \times 3 \times 3$ the
+
+$$\mathbb{L}(3,2,3) = 1 + 1(3-1) + 3(2-1) + 12(3-1) = 28$$ 
+
+$$\mathbb{L}(4,3,1) = 1 + 1(4-1) + 3(3-1) + 12(1-1) = 10$$
+
+$$\mathbb{L}(2,2,2) = 1 + 1(2-1) + 3(2-1) + 12(2-1) = 16$$
+
+$$\mathbb{T}_1(16) = 1 + (16-1) \mod 4 = 4$$
+$$\mathbb{T}_2(16) = 1 + ((16-1) \mod 12)/4 = 1$$
+$$\mathbb{T}_3(16) = 1 + (16-1)/12 = 2$$
+
+$$\mathbb{T}_1(7) = 1 + (7-1) \mod 4 = 3$$
+$$\mathbb{T}_2(16) = 1 + ((7-1) \mod 12)/4 = 2$$
+$$\mathbb{T}_3(16) = 1 + (7-1)/12 = 2$$
+
+$$\mathbb{T}_1(16) = 1 + (34-1) \mod 4 = 2$$
+$$\mathbb{T}_2(16) = 1 + ((34-1) \mod 12)/4 = 3$$
+$$\mathbb{T}_3(16) = 1 + (34-1)/12 = 3$$
+
+For a $100 \times 80 \times 60$ the
+
+$$\mathbb{L}(70,26,58) = 1 + 1(70-1) + 100(26-1) + 8000(58-1) = 458570$$ 
+
+$$\mathbb{L}(4,36,23) = 1 + 1(4-1) + 100(36-1) + 8000(23-1) = 179504$$
+
+$$\mathbb{L}(77,64,12) = 1 + 1(77-1) + 100(64-1) + 8000(12-1) = 94377$$
+
+$$\mathbb{T}_1(235087) = 1 + (235087-1) \mod 100 = 87$$
+$$\mathbb{T}_2(235087) = 1 + ((235087-1) \mod 8000)/100 = 31$$
+$$\mathbb{T}_3(235087) = 1 + (235087-1)/8000 = 30$$
+
+$$\mathbb{T}_1(213882) = 1 + (213882-1) \mod 100 = 82$$
+$$\mathbb{T}_2(213882) = 1 + ((213882-1) \mod 8000)/100 = 59$$
+$$\mathbb{T}_3(213882) = 1 + (213882-1)/8000 = 27$$
+
+$$\mathbb{T}_1(310231) = 1 + (310231-1) \mod 100 = 31$$
+$$\mathbb{T}_2(310231) = 1 + ((310231-1) \mod 8000)/100 = 63$$
+$$\mathbb{T}_3(310231) = 1 + (310231-1)/8000 = 39$$
+
+for a tensor of size $5 \times 4 \times 3 \times 2 \times 1$ ths strides for the natural ordering are $s_1 = 1$, $s_2 = 5$, $s_3 = 20$, $s_4 = 60$, $s_5 = 120$
+
+
+## 122
+
+The vectors $a = (1,-2,0)^T$, $b = (3,5,2,-1)^T$, $c=(7,11)^T$ form the following $3$-way tensor 
+
+$$v_{ijk} - a_ib_jc_k$$
+
+$$v_{:,:,1} = \begin{pmatrix} 21 & 35 & 14 & -7 \\ -42 & -70 & -28 & 14 \\ 0 & 0 & 0 & 0\end{pmatrix}$$
+$$v_{:,:,2} = \begin{pmatrix} 33 & 55 & 22 & -11 \\ -66 & -110 & -44 & 22 \\ 0 & 0 & 0 & 0\end{pmatrix}$$
+
+
+$$\begin{array}{c|c|c} \text{Tuple} & \text{Linear Index} & \text{Tensor Value}  \\
+\hline
+(1,1,1) & 1 & 21 \\
+(2,1,1) & 2 & -42 \\
+(2,1,1) & 3 & 0 \\
+(1,2,1) & 4 & 35 \\
+(2,2,1) & 5 & -70 \\
+(3,2,1) & 6 & 0 \\
+(1,3,1) & 7 & 14 \\
+(2,3,1) & 8 & -28 \\
+(3,3,1) & 9 & 0 \\
+(1,4,1) & 10 & -7 \\
+(2,4,1) & 11 & 14 \\
+(3,4,1) & 12 & 0 \\
+(1,1,2) & 13 & 33 \\
+(2,1,2) & 14 & -66 \\
+(3,1,2) & 15 & 0 \\
+(1,2,2) & 16 & 55 \\
+(2,2,2) & 17 & -110 \\
+(3,2,2) & 18 & 0 \\
+(1,3,2) & 19 & 22 \\
+(2,3,2) & 20 & -44 \\
+(3,3,2) & 21 & 0 \\
+(1,4,2) & 22 & -11 \\
+(2,4,2) & 23 & 22 \\
+(3,4,2) & 24 & 0 \\
+ \end{array}$$
+
+
+
+## 123
+
+From what I understand, the Khatri-Rao product is a column-wise kronecker product.  where each column is a vectorized product of the columns of $A$, $B$, and $C$.  So for the matrices
+
+$$A = \begin{pmatrix}1 & 2 & 3 & 4\end{pmatrix}$$
+$$B = \begin{pmatrix}1 & 0 & -1 & 2 \\ 2 & 3 & 1 & 1\end{pmatrix}$$
+$$C = \begin{pmatrix}1 & -1 & 0 & 2 \\ 0 & 2 & 1 & -1 \\ 3 & 1 & -2 & 0\end{pmatrix}$$
+
+the Khatri-Rao product will be
+
+$$A \cdot B \cdot C = \begin{pmatrix}
+1 & 0 & 0 & 16 \\
+0 & 0 & -3 & -8 \\
+3 & 0 & 6 & 0 \\
+2 & -6 & 0 & 8 \\
+0 & 12 & 3 & -4 \\
+6 & 6 & -6 & 0
+\end{pmatrix}$$
+
+
+
+## 124
+After perfomring the singular value decomposition of the provided image, the first 5 singular values are $180.6, 50.7, 40.4, 26.9, 23.7$
+
+using the first $10$ singular values
+
+
+![factor set](./figures/A10.png)
+
+using the first $20$ singular values
+![factor set](./figures/A20.png)
+
+using the first $40$ singular values
+![factor set](./figures/A40.png)
+
+Already at $10$, the image becomes somewhat recognizable.
+
+
+## 125
+
+For the $3 \times 3 \times 2$ tensor
+
+$$X[:,:,1] = \begin{pmatrix} 3 & 9 & 1 \\ 8 & 2 & 1 \\ 4 & 3 & 9\end{pmatrix}$$
+$$X[:,:,2] = \begin{pmatrix} 6 & 9 & 5 \\ 5 & 6 & 4 \\ 1 & 4 & 1\end{pmatrix}$$
+
+
+The permuted tensor $Z = \mathbb{P}(X, (3,1,2))$ is 
+
+$$Z[:,:,1] = \begin{pmatrix} 3 & 8 & 4 \\ 6 & 5 & 1 \end{pmatrix}$$
+$$Z[:,:,2] = \begin{pmatrix} 9 & 2 & 3 \\ 9 & 6 & 4 \end{pmatrix}$$
+$$Z[:,:,3] = \begin{pmatrix} 1 & 1 & 9 \\ 5 & 4 & 1 \end{pmatrix}$$
+
+
+## 128
+
+For the $3 \times 3 \times 2$ tensor
+
+$$X[:,:,1] = \begin{pmatrix} 3 & 9 & 1 \\ 6 & 9 & 5 \end{pmatrix}$$
+$$X[:,:,2] = \begin{pmatrix} 8 & 2 & 1 \\ 5 & 6 & 4 \end{pmatrix}$$
+$$X[:,:,3] = \begin{pmatrix} 4 & 3 & 9 \\ 1 & 4 & 1 \end{pmatrix}$$
+
+The mode-1 unfolding is 
+
+$$X_{(1)} = \begin{pmatrix} 3 & 9 & 1 & 8 & 2 & 1 & 4 & 3 & 9 \\ 6 & 9 & 5 & 5 & 6 & 4 & 1 & 4 & 1 \end{pmatrix}$$
+
+mode-2 unfolding is
+
+$$X_{(2)} = \begin{pmatrix} 3 & 6 & 8 & 5 & 4 & 1 \\ 9 & 9 & 2 & 6 & 3 & 4 \\ 1 & 5 & 1 & 4 & 9 & 1 \end{pmatrix}$$
+
+And mode-3 unfolding is
+
+$$X_{(3)} = \begin{pmatrix} 3 & 6 & 9 & 9 & 1 & 5 \\ 8 & 5 & 2 & 6 & 1 & 4 \\ 4 & 1 & 3 & 4 & 9 & 1 \end{pmatrix}$$
+
+
+
+## 130
+
+the tensor formed by the outer product of $a = (1,-2,0)^T$, $b = (3,5,2,-1)^T$, $c = (7,11)^T$ is 
+
+$$X[:,:,1] = \begin{pmatrix} 21 & 35 & 14 & -7 \\ -42 & -70 & -28 & 14 \\ 0 & 0 & 0 & 0\end{pmatrix}$$
+$$X[:,:,2] = \begin{pmatrix} 33 & 55 & 22 & -11 \\ -66 & -110 & -44 & 22 \\ 0 & 0 & 0 & 0\end{pmatrix}$$
+
+$$a \otimes b \otimes c = \begin{pmatrix} 21 \\ -42 \\ 0 \\ 35 \\ -70 \\ 0 \\ 14 \\ -28 \\ 0 \\ -7 \\ 14 \\ 0 \\ 33 \\ -66 \\ 0 \\ 55 \\ -110 \\ 0 \\ 22 \\ -44 \\ 0 \\ -11 \\ 22 \\ 0\end{pmatrix} = vec(X)$$
+
+$$a(c \times b)^T = \begin{pmatrix} 21 & 35 & 14 & -7 & 33 & 55 & 22 & -11 \\ -42 & -70 & -28 & 14 & -66 & -110 & -44 & 22 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\end{pmatrix} = X_{(1)}$$
+$$b(c \times a)^T = \begin{pmatrix}21 & -42 & 0 & 33 & -66 & 0 \\ 35 & -70 & 0 & 55 & -110 & 0 \\ 14 & -28 & 0 & 22 & -44 & 0 \\ -7 & 14 & 0 & -11 & 22 & 0\end{pmatrix} = X_{(2)}$$
+$$c(b \times a)^T = \begin{pmatrix}21 & -42 & 0 & 35 & -70 & 0 & 14 & -28 & 0 & -7 & 14 & 0 \\ 33 & -66 & 0 & 55 & -110 & 0 & 22 & -44 & 0 & -11 & 22 & 0\end{pmatrix} = X_{(3)}$$
+
+These are all the same elements, just ordered differently
+
+
+## 131
+
+![factor set](./figures/TTM2.png)
+
+
+
+
+## 132 
+
+The dimensions of $Y$ are $2 \times 3 \times 4$
+
+The 3 TTM images are
+
+![factor set](./figures/TTM_images.png)
+
+Based on reading $3.4.3$, it is most efficient to perform a sequence of individual TTMs, is this the tensor analog of performing $A(Bx)$ instead of $(AB)x$ in a matrix matrix vector product?
+
+
+## 133 
+
+Performing the CP decomposition on the 3 way tensor, and comparing the reconstructed tensor to the original tensor for different rank approximations, I get this
+
+![factor set](./figures/CP.png)
+
+This means that the higher rank approximates the tensor better.  Which makes sense.  After a certain number of ranks, you seem to get diminishing returns.
+
+Performing the Tucker decomposition, my compression ratio was $0.0061$ which seems very good.

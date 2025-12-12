@@ -810,4 +810,8 @@ Applied to matrices where multiplication is most natural on the left,
 
 $$(T_g \psi)(x) = \psi(g^{-1}x)$$
 
+## Tensors 
+
+
+![factor set](./figures/tensors.png)
 
